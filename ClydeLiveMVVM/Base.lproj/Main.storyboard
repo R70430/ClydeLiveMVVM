@@ -938,15 +938,15 @@
             </objects>
             <point key="canvasLocation" x="2726" y="1533"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--StartTBVC-->
         <scene sceneID="LRn-Ne-gQE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bHx-AT-III" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bHx-AT-III" customClass="startTBVC" customModule="ClydeLiveMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KCY-lS-zNP">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dJf-Aw-J9l"/>

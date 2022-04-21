@@ -10,7 +10,6 @@
 		00269870E8829D0001C7A29F /* Pods_ClydeLiveMVVM_ClydeLiveMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C549943E02420AD5D019D244 /* Pods_ClydeLiveMVVM_ClydeLiveMVVMUITests.framework */; };
 		4B151F59280E5FD100AF6EDA /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B151F58280E5FD100AF6EDA /* AlertVC.swift */; };
 		4B151F5B280E6B3E00AF6EDA /* StreamerCodeble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B151F5A280E6B3E00AF6EDA /* StreamerCodeble.swift */; };
-		4B151F5D280E706600AF6EDA /* tabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B151F5C280E706600AF6EDA /* tabBarC.swift */; };
 		4B404FFC280924D5004DAC91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B404FFB280924D5004DAC91 /* AppDelegate.swift */; };
 		4B404FFE280924D5004DAC91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B404FFD280924D5004DAC91 /* SceneDelegate.swift */; };
 		4B405003280924D5004DAC91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B405001280924D5004DAC91 /* Main.storyboard */; };
@@ -34,6 +33,7 @@
 		4B962A23280EB0B0006A1D02 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B962A22280EB0B0006A1D02 /* login.json */; };
 		4B9A5415280A92EC00F4E09C /* CustomElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A5414280A92EC00F4E09C /* CustomElement.swift */; };
 		4B9A5419280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A5418280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift */; };
+		4BA08F1C2810E646006DF434 /* startTBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA08F1B2810E646006DF434 /* startTBVC.swift */; };
 		4BA23E5B280D0FE600332EAA /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA23E5A280D0FE600332EAA /* PersonalInfoVC.swift */; };
 		4BC0F865280E1DC6001F0904 /* openDarkDoor.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BC0F864280E1DC6001F0904 /* openDarkDoor.json */; };
 		4BC0F867280E1F57001F0904 /* loves.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BC0F866280E1F57001F0904 /* loves.json */; };
@@ -70,7 +70,6 @@
 		3E656DE80109CFEEB62A0D7C /* Pods-ClydeLiveMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClydeLiveMVVM.debug.xcconfig"; path = "Target Support Files/Pods-ClydeLiveMVVM/Pods-ClydeLiveMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		4B151F58280E5FD100AF6EDA /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		4B151F5A280E6B3E00AF6EDA /* StreamerCodeble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerCodeble.swift; sourceTree = "<group>"; };
-		4B151F5C280E706600AF6EDA /* tabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarC.swift; sourceTree = "<group>"; };
 		4B404FF8280924D5004DAC91 /* ClydeLiveMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClydeLiveMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B404FFB280924D5004DAC91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B404FFD280924D5004DAC91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		4B962A22280EB0B0006A1D02 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		4B9A5414280A92EC00F4E09C /* CustomElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElement.swift; sourceTree = "<group>"; };
 		4B9A5418280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchsStreamerCollectionVCell.swift; sourceTree = "<group>"; };
+		4BA08F1B2810E646006DF434 /* startTBVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startTBVC.swift; sourceTree = "<group>"; };
 		4BA23E5A280D0FE600332EAA /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
 		4BC0F864280E1DC6001F0904 /* openDarkDoor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openDarkDoor.json; sourceTree = "<group>"; };
 		4BC0F866280E1F57001F0904 /* loves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loves.json; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 				4B5E8A1B28093F1D00F53633 /* Extension.swift */,
 				4B9A5414280A92EC00F4E09C /* CustomElement.swift */,
 				4B151F5A280E6B3E00AF6EDA /* StreamerCodeble.swift */,
-				4B151F5C280E706600AF6EDA /* tabBarC.swift */,
+				4BA08F1B2810E646006DF434 /* startTBVC.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -570,6 +570,7 @@
 				4B5E8A2B2809627C00F53633 /* HomesStreamerCollectionVCell.swift in Sources */,
 				4B5E8A1828092BB500F53633 /* LoginVC.swift in Sources */,
 				4B9A5415280A92EC00F4E09C /* CustomElement.swift in Sources */,
+				4BA08F1C2810E646006DF434 /* startTBVC.swift in Sources */,
 				4B5E8A13280929E700F53633 /* HomeVC.swift in Sources */,
 				4B5E8A1A28092CD300F53633 /* RegisterVC.swift in Sources */,
 				4B404FFC280924D5004DAC91 /* AppDelegate.swift in Sources */,
@@ -578,7 +579,6 @@
 				4B404FFE280924D5004DAC91 /* SceneDelegate.swift in Sources */,
 				4B151F59280E5FD100AF6EDA /* AlertVC.swift in Sources */,
 				4B151F5B280E6B3E00AF6EDA /* StreamerCodeble.swift in Sources */,
-				4B151F5D280E706600AF6EDA /* tabBarC.swift in Sources */,
 				4B5E8A29280945E900F53633 /* Enums.swift in Sources */,
 				4B5E8A1C28093F1D00F53633 /* Extension.swift in Sources */,
 			);

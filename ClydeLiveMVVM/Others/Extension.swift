@@ -12,18 +12,21 @@ import UIKit
 //MARK: - 在Storyboard面板上新增功能
 extension String {
     //使用正則表達式替換
-    func pregReplace(pattern: String, with: String,
-                     options: NSRegularExpression.Options = []) -> String {
-        let regex = try! NSRegularExpression(pattern: pattern, options: options)
-        return regex.stringByReplacingMatches(in: self, options: [],
-                                              range: NSMakeRange(0, self.count),
-                                              withTemplate: with)
-    }
+    func pregReplace(
+        pattern: String,
+        with: String,
+        options: NSRegularExpression.Options = []) -> String {
+            let regex = try! NSRegularExpression(pattern: pattern, options: options)
+            return regex.stringByReplacingMatches(
+                in: self, options: [],
+                range: NSMakeRange(0, self.count),
+                withTemplate: with)
+        }
 }
 
 //UIView
 @IBDesignable extension UIView {
-
+    
     @IBInspectable var cornerRadius: CGFloat {
         set {
             layer.cornerRadius = newValue
@@ -32,7 +35,7 @@ extension String {
             return layer.cornerRadius
         }
     }
-
+    
     //框線寬
     @IBInspectable var borderWidth: CGFloat {
         set {
@@ -42,7 +45,7 @@ extension String {
             return layer.borderWidth
         }
     }
-
+    
     //框線顏色
     @IBInspectable var borderColor: UIColor? {
         set {
