@@ -260,7 +260,7 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FbT-Jo-Zpx">
-                                        <rect key="frame" x="0.0" y="10" width="414" height="319"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="254"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="chatCell" id="YWs-rR-WNl" customClass="StreamersChatroomTableVCell" customModule="ClydeLiveMVVM" customModuleProvider="target">
@@ -308,18 +308,87 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuq-dt-KQm">
+                                        <rect key="frame" x="10" y="269" width="394" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMz-Zk-njW" customClass="CERoundButton" customModule="ClydeLiveMVVM" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="5" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="EJl-cS-hU5"/>
+                                                    <constraint firstAttribute="height" constant="50" id="vq7-Bv-3JG"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="iconBick"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="iconBick"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="donateBikeAction:" destination="H0K-p0-eQ8" eventType="touchUpInside" id="6HK-dt-f97"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-W8-EsH" customClass="CERoundButton" customModule="ClydeLiveMVVM" customModuleProvider="target">
+                                                <rect key="frame" x="70" y="5" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="SPs-UG-NaO"/>
+                                                    <constraint firstAttribute="height" constant="50" id="T0k-JH-Vd4"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="iconBick"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="iconRocket"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="donateRocketAction:" destination="H0K-p0-eQ8" eventType="touchUpInside" id="qEY-SU-NrD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuB-av-i7J" customClass="CERoundButton" customModule="ClydeLiveMVVM" customModuleProvider="target">
+                                                <rect key="frame" x="130" y="5" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="9vG-52-cdg"/>
+                                                    <constraint firstAttribute="height" constant="50" id="NL7-q9-NmC"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="iconBick"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <backgroundConfiguration key="background" image="iconHouse"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="donateHouseAction:" destination="H0K-p0-eQ8" eventType="touchUpInside" id="Gps-sE-kON"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="NMz-Zk-njW" firstAttribute="leading" secondItem="nuq-dt-KQm" secondAttribute="leading" constant="10" id="900-IA-qD8"/>
+                                            <constraint firstItem="TuB-av-i7J" firstAttribute="top" secondItem="nuq-dt-KQm" secondAttribute="top" constant="5" id="Jqo-Xj-Mvk"/>
+                                            <constraint firstAttribute="bottom" secondItem="NMz-Zk-njW" secondAttribute="bottom" constant="5" id="JtG-uY-eHF"/>
+                                            <constraint firstItem="TuB-av-i7J" firstAttribute="leading" secondItem="iXh-W8-EsH" secondAttribute="trailing" constant="10" id="LWv-9N-CXM"/>
+                                            <constraint firstItem="iXh-W8-EsH" firstAttribute="leading" secondItem="NMz-Zk-njW" secondAttribute="trailing" constant="10" id="ROu-pZ-tKj"/>
+                                            <constraint firstAttribute="bottom" secondItem="iXh-W8-EsH" secondAttribute="bottom" constant="5" id="Rzi-8O-wYJ"/>
+                                            <constraint firstItem="NMz-Zk-njW" firstAttribute="top" secondItem="nuq-dt-KQm" secondAttribute="top" constant="5" id="diJ-Mc-Uom"/>
+                                            <constraint firstAttribute="bottom" secondItem="TuB-av-i7J" secondAttribute="bottom" constant="5" id="flg-ra-pQH"/>
+                                            <constraint firstItem="iXh-W8-EsH" firstAttribute="top" secondItem="nuq-dt-KQm" secondAttribute="top" constant="5" id="jdO-Mp-rZI"/>
+                                            <constraint firstAttribute="height" constant="60" id="pNs-rn-GtB"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="FbT-Jo-Zpx" secondAttribute="trailing" id="1MQ-r5-PxZ"/>
                                     <constraint firstAttribute="bottom" secondItem="agN-Gy-of9" secondAttribute="bottom" constant="20" id="5yn-ca-dMm"/>
+                                    <constraint firstItem="nuq-dt-KQm" firstAttribute="leading" secondItem="Hru-W8-GjK" secondAttribute="leading" constant="10" id="8eH-Nd-fLp"/>
                                     <constraint firstItem="FbT-Jo-Zpx" firstAttribute="top" secondItem="Hru-W8-GjK" secondAttribute="top" constant="10" id="HE5-5F-gBK"/>
-                                    <constraint firstItem="agN-Gy-of9" firstAttribute="top" secondItem="FbT-Jo-Zpx" secondAttribute="bottom" constant="10" id="IbS-nQ-m4k"/>
                                     <constraint firstItem="agN-Gy-of9" firstAttribute="leading" secondItem="lrv-cH-9pL" secondAttribute="trailing" constant="20" id="QH5-zj-WvK"/>
+                                    <constraint firstItem="agN-Gy-of9" firstAttribute="top" secondItem="nuq-dt-KQm" secondAttribute="bottom" constant="10" id="SqJ-LN-kha"/>
                                     <constraint firstItem="FbT-Jo-Zpx" firstAttribute="leading" secondItem="Hru-W8-GjK" secondAttribute="leading" id="Yr7-6U-dNZ"/>
                                     <constraint firstAttribute="bottom" secondItem="lrv-cH-9pL" secondAttribute="bottom" constant="20" id="aa3-dE-9Fc"/>
+                                    <constraint firstItem="nuq-dt-KQm" firstAttribute="top" secondItem="FbT-Jo-Zpx" secondAttribute="bottom" constant="5" id="d8W-Nc-tU6"/>
                                     <constraint firstItem="lrv-cH-9pL" firstAttribute="leading" secondItem="Hru-W8-GjK" secondAttribute="leading" constant="20" id="des-t2-1xl"/>
                                     <constraint firstItem="lrv-cH-9pL" firstAttribute="height" secondItem="agN-Gy-of9" secondAttribute="height" id="dx4-me-9UV"/>
+                                    <constraint firstAttribute="trailing" secondItem="nuq-dt-KQm" secondAttribute="trailing" constant="10" id="nqD-2L-Yy0"/>
                                     <constraint firstAttribute="trailing" secondItem="agN-Gy-of9" secondAttribute="trailing" constant="20" id="v35-tm-w6a"/>
                                 </constraints>
                             </view>
@@ -341,6 +410,7 @@
                         <outlet property="chatTextField" destination="lrv-cH-9pL" id="9Uq-in-jIz"/>
                         <outlet property="chatView" destination="Hru-W8-GjK" id="fyZ-Ik-21U"/>
                         <outlet property="chatViewButtomLayoutConstraint" destination="mZh-8h-5bx" id="AJY-1D-v2S"/>
+                        <outlet property="donateBikeButton" destination="NMz-Zk-njW" id="1Cm-HC-sHw"/>
                         <outlet property="exitRoundButton" destination="VVK-47-ezf" id="431-h7-NPE"/>
                         <outlet property="sendButton" destination="agN-Gy-of9" id="fqH-mp-jBS"/>
                     </connections>
@@ -1291,6 +1361,9 @@
         <designable name="Ld1-VA-39c">
             <size key="intrinsicContentSize" width="25" height="14.5"/>
         </designable>
+        <designable name="NMz-Zk-njW">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
         <designable name="NiP-Mq-t2L">
             <size key="intrinsicContentSize" width="112" height="112"/>
         </designable>
@@ -1308,6 +1381,9 @@
         </designable>
         <designable name="S09-7g-rOf">
             <size key="intrinsicContentSize" width="58" height="38"/>
+        </designable>
+        <designable name="TuB-av-i7J">
+            <size key="intrinsicContentSize" width="24" height="14"/>
         </designable>
         <designable name="VTS-05-SR8">
             <size key="intrinsicContentSize" width="58" height="38"/>
@@ -1334,6 +1410,9 @@
             <size key="intrinsicContentSize" width="90" height="90"/>
         </designable>
         <designable name="h2j-KT-e69"/>
+        <designable name="iXh-W8-EsH">
+            <size key="intrinsicContentSize" width="24" height="14"/>
+        </designable>
         <designable name="lNM-tI-jcb">
             <size key="intrinsicContentSize" width="67" height="31"/>
         </designable>
@@ -1350,9 +1429,12 @@
     <resources>
         <image name="brokenHeart" width="62" height="58"/>
         <image name="btnEdit" width="41" height="41"/>
+        <image name="iconBick" width="256" height="256"/>
         <image name="iconEyesHidden" width="256" height="256"/>
         <image name="iconEyesShow" width="256" height="256"/>
+        <image name="iconHouse" width="256" height="256"/>
         <image name="iconPersonal" width="8" height="10"/>
+        <image name="iconRocket" width="256" height="256"/>
         <image name="logout" width="23" height="19"/>
         <image name="paopao" width="90" height="90"/>
         <image name="picPersonal" width="112" height="112"/>

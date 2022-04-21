@@ -23,9 +23,9 @@ class startTBVC: UITabBarController {
         //使用枚舉遍歷,判斷選中的tabBarItem等於Array中的第幾個
         for (k,v) in (tabBar.items?.enumerated())! {
             if v == item {
-                // 打印选中的iteme下标
+                // print出選中的item圖示
                 print(k)
-                // 将下标传入动画方法
+                // 將圖示傳入動畫function
                 animationWithIndex(index: k)
             }
         }

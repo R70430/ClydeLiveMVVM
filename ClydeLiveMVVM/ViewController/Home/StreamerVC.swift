@@ -35,6 +35,7 @@ class StreamerVC: UIViewController {
     //RoundButton
     @IBOutlet weak var exitRoundButton: CERoundButton!
     @IBOutlet weak var sendButton: CERoundButton!
+    @IBOutlet weak var donateBikeButton: CERoundButton!
     @IBOutlet weak var chatBottomLayoutConstraint: NSLayoutConstraint!
     //TableView
     @IBOutlet weak var chatTableView: UITableView!
@@ -364,6 +365,49 @@ class StreamerVC: UIViewController {
         }
         sendDataToServer(str: chatText)
     }
+    func donate(sender:UIButton,commodity:String,price:Int,animateName:String,time:Double,contentMode:UIView.ContentMode){
+        sender.isEnabled = false
+        let alert = UIAlertController(title: "購買\(commodity)給直播主嗎？", message: "即將使用 \(price) 泡泡幣購買\(commodity)給直播主，確定購買？", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "買下去", style: .default) { alertAction in
+            //初始化動畫
+            self.loveAnimationView = .init(name: animateName)
+            if let ani = self.loveAnimationView {
+                ani.frame = self.view.frame
+                ani.contentMode = contentMode
+                ani.isHidden = false
+                ani.animationSpeed = 1
+                ani.alpha = 0.7
+            }
+            self.view.addSubview(self.loveAnimationView!)
+            self.loveAnimationView?.play()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + time) {
+                sender.isEnabled = true
+                self.loveAnimationView?.isHidden = true
+                self.loveAnimationView?.stop()
+            }
+        }
+        alert.addAction(yesAction)
+        let noAction = UIAlertAction(title: "我沒錢", style: .cancel) { alertAction in
+            sender.isEnabled = true
+        }
+        alert.addAction(noAction)
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func donateBikeAction(_ sender: UIButton) {
+        donate(sender: sender, commodity: "腳踏車", price: 500, animateName: "bicycle", time: 2, contentMode: .scaleAspectFill)
+    }
+    
+    @IBAction func donateRocketAction(_ sender: UIButton) {
+        donate(sender: sender, commodity: "火箭", price: 10000000, animateName: "rocket", time: 2.5, contentMode: .scaleAspectFill)
+    }
+    
+    @IBAction func donateHouseAction(_ sender: UIButton) {
+        donate(sender: sender, commodity: "房子", price: 5000000, animateName: "house", time: 2, contentMode: .scaleAspectFit)
+    }
+    
+    
 }
 //MARK: - EX - TableView
 extension StreamerVC: UITableViewDelegate, UITableViewDataSource {
