@@ -31,6 +31,7 @@
 		4B5E8A29280945E900F53633 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E8A28280945E900F53633 /* Enums.swift */; };
 		4B5E8A2B2809627C00F53633 /* HomesStreamerCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E8A2A2809627C00F53633 /* HomesStreamerCollectionVCell.swift */; };
 		4B6BA4BD280AC862008083A5 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6BA4BC280AC862008083A5 /* SearchHeaderView.swift */; };
+		4B962A23280EB0B0006A1D02 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B962A22280EB0B0006A1D02 /* login.json */; };
 		4B9A5415280A92EC00F4E09C /* CustomElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A5414280A92EC00F4E09C /* CustomElement.swift */; };
 		4B9A5419280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A5418280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift */; };
 		4BA23E5B280D0FE600332EAA /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA23E5A280D0FE600332EAA /* PersonalInfoVC.swift */; };
@@ -94,6 +95,7 @@
 		4B5E8A28280945E900F53633 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		4B5E8A2A2809627C00F53633 /* HomesStreamerCollectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomesStreamerCollectionVCell.swift; sourceTree = "<group>"; };
 		4B6BA4BC280AC862008083A5 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
+		4B962A22280EB0B0006A1D02 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		4B9A5414280A92EC00F4E09C /* CustomElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElement.swift; sourceTree = "<group>"; };
 		4B9A5418280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchsStreamerCollectionVCell.swift; sourceTree = "<group>"; };
 		4BA23E5A280D0FE600332EAA /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				4BC0F86E280E2CE8001F0904 /* approved.json */,
 				4BC0F86C280E2BC6001F0904 /* approve.json */,
 				4BC0F868280E2075001F0904 /* registing.json */,
+				4B962A22280EB0B0006A1D02 /* login.json */,
 				4BC0F866280E1F57001F0904 /* loves.json */,
 			);
 			path = LottieAnimate;
@@ -429,6 +432,7 @@
 				4B405003280924D5004DAC91 /* Main.storyboard in Resources */,
 				4D9959D0280C92B70018D72B /* musicWaves.json in Resources */,
 				4BC0F869280E2075001F0904 /* registing.json in Resources */,
+				4B962A23280EB0B0006A1D02 /* login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,13 +763,16 @@
 				INFOPLIST_FILE = ClydeLiveMVVM/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Clyde;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -792,13 +799,16 @@
 				INFOPLIST_FILE = ClydeLiveMVVM/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Clyde;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

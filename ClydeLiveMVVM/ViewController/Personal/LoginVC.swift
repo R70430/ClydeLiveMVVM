@@ -16,6 +16,8 @@ class LoginVC: UIViewController {
     let userDefault = UserDefaults()
     // Firebase 監聽器
     var handle: AuthStateDidChangeListenerHandle?
+    //登入動畫
+    private var loginAnimateView: AnimationView?
     //MARK: - @IBOutlet
     //Button
     @IBOutlet weak var forgetPassButton: UIButton!
@@ -32,6 +34,7 @@ class LoginVC: UIViewController {
     //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingAnimate()
     }
     override func viewWillAppear(_ animated: Bool) {
         print("進入了 LoginVC 的 viewWillAppear")
@@ -109,6 +112,19 @@ class LoginVC: UIViewController {
         }
     }
     
+    func settingAnimate(){
+        loginAnimateView = AnimationView(name: "login")
+        if let ani = loginAnimateView {
+            ani.frame = view.frame
+            ani.contentMode = .scaleAspectFit
+            ani.isHidden = true
+            ani.loopMode = .loop
+            ani.animationSpeed = -1.5
+            ani.alpha = 0.9
+        }
+        view.addSubview(loginAnimateView!)
+    }
+    
     
     //MARK: - IBAction
     
@@ -132,11 +148,18 @@ class LoginVC: UIViewController {
         //登入FireBase
         let accountEmail = "\(account)@clmail.com"
         //執行FireBase登入
+        //執行動畫
+        loginAnimateView?.isHidden = false
+        loginAnimateView?.play()
+        
         Auth.auth().signIn(withEmail: accountEmail, password: password) { user,err in
             //解除小鍵盤
             self.view.endEditing(true)
             //檢查是否有登入錯誤
             guard err == nil else {
+                //停止動畫
+                self.loginAnimateView?.isHidden = false
+                self.loginAnimateView?.stop()
                 let alert = UIAlertController(title: "firebase登入時發生錯誤", message: "錯誤訊息：『\(err!.localizedDescription)』", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "確定", style: .cancel)
                 alert.addAction(okAction)
@@ -146,6 +169,9 @@ class LoginVC: UIViewController {
             //確定登入成功，儲存資訊讓『記住我』適用
             self.saveLoginInfoToUserDefault(account: account, password: password)
             //跳出訊息Alert
+            //停止動畫
+            self.loginAnimateView?.isHidden = false
+            self.loginAnimateView?.stop()
             let alert = UIAlertController(title: "登入成功", message: "即將跳轉至首頁", preferredStyle: .alert)
             self.present(alert, animated: true)
             
