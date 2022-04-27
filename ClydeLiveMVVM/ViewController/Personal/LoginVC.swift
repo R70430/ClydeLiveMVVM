@@ -21,7 +21,7 @@ class LoginVC: UIViewController {
     //MARK: - @IBOutlet
     //Button
     @IBOutlet weak var forgetPassButton: UIButton!
-    @IBOutlet weak var loginButton: CERoundButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registButton: UIButton!
     @IBOutlet weak var rememberButton: UIButton!
     @IBOutlet weak var seeButton: UIButton!
@@ -30,8 +30,11 @@ class LoginVC: UIViewController {
     //TextField
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+
+}
+//MARK: - Override
+extension LoginVC {
     
-    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         settingAnimate()
@@ -41,8 +44,7 @@ class LoginVC: UIViewController {
         //新增監聽器 若是登入狀態則跳轉到用戶資訊頁面
         handle = Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
-                let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = myStoryboard.instantiateViewController(withIdentifier: "PersonalInfoVC")
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PersonalInfoVC")
                 self.navigationController?.pushViewController(vc, animated: false)
             }
         }
@@ -52,6 +54,9 @@ class LoginVC: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         //移除監聽器
+        if handle != nil {
+            Auth.auth().removeStateDidChangeListener(handle!)
+        }
         guard handle != nil else{ return }
         Auth.auth().removeStateDidChangeListener(handle!)
     }
@@ -67,12 +72,11 @@ class LoginVC: UIViewController {
             rememberLoginInfoAccount: account,
             rememberLoginInfoPassword: password,
             rememberLoginInfoStatus: rememberStatus)
-        //建立編碼器
-        let encoder = JSONEncoder()
+ 
         //執行編碼
         do {
             //編碼成JSON Data型別
-            let remJsonData = try encoder.encode(remCodable)
+            let remJsonData = try JSONEncoder().encode(remCodable)
             //儲存至userDefault
             userDefault.setValue(remJsonData, forKey: userDefaultKeys.rememberData.rawValue)
         } catch {
@@ -177,7 +181,7 @@ class LoginVC: UIViewController {
             
             //延時1秒
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-               
+                
                 //跳轉到首頁
                 self.tabBarController?.selectedIndex = 0
                 self.dismiss(animated: false)
@@ -190,12 +194,13 @@ class LoginVC: UIViewController {
         sender.isEnabled = false
         loginButton.isEnabled = false
         //跳轉到註冊頁面
-        
-        let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = myStoryboard.instantiateViewController(withIdentifier: storyboardsVCsID.register.rawValue)
-        self.navigationController?.pushViewController(vc, animated: true)
-        sender.isEnabled = true
-        self.loginButton.isEnabled = true
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: storyboardsVCsID.register.rawValue)
+        vc.view.backgroundColor = .white
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(vc, animated: true)
+            sender.isEnabled = true
+            self.loginButton.isEnabled = true
+        }
     }
     //記住資料
     @IBAction func rememberAction(_ sender: UIButton) {
@@ -221,8 +226,9 @@ class LoginVC: UIViewController {
         }
     }
     
-
+    
 }
+//MARK: - Codable
 //記住我要記住的個人資訊(要轉成json儲存)
 struct rememberLoginInfoCodable: Codable {
     var rememberLoginInfoAccount:String

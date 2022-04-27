@@ -18,6 +18,7 @@ class RegisterVC: UIViewController {
     var changedPhoto = false
     //已選擇的頭像
     var selectedImage = UIImage()
+    //起始位置
     var startLocation = CGFloat()
     //註冊中動畫
     private var registingAnimationView: AnimationView?
@@ -25,7 +26,7 @@ class RegisterVC: UIViewController {
     private var registSuccessAnimationView: AnimationView?
     //MARK: - @IBOutlet
     //ImageView
-    @IBOutlet weak var photoImageView: CECircleImageView!
+    @IBOutlet weak var photoImageView: UIImageView!
     //TextField
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var accountTextField: UITextField!
@@ -37,7 +38,9 @@ class RegisterVC: UIViewController {
     //StackView
     @IBOutlet weak var tfStackView: UIStackView!
     
-    
+}
+//MARK: - Override
+extension RegisterVC {
     //MARK: - override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +58,6 @@ class RegisterVC: UIViewController {
         
         picker.delegate = self
         settingAnimate()
-//        nickNameTextField.text = "陽光宅男"
-//        accountTextField.text = "account"
-//        passwordTextField.text = "password"
         
     }
     override func viewWillAppear(_ animated: Bool) {

@@ -239,7 +239,7 @@
                                 <state key="normal" image="logout"/>
                                 <buttonConfiguration key="configuration" style="plain" image="logout"/>
                                 <connections>
-                                    <action selector="exitAction:" destination="H0K-p0-eQ8" eventType="touchUpInside" id="sLu-gO-Wfu"/>
+                                    <action selector="exitAction:" destination="H0K-p0-eQ8" eventType="touchUpInside" id="iCJ-mP-rpB"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hru-W8-GjK">
@@ -411,7 +411,7 @@
                         <outlet property="chatView" destination="Hru-W8-GjK" id="fyZ-Ik-21U"/>
                         <outlet property="chatViewButtomLayoutConstraint" destination="mZh-8h-5bx" id="AJY-1D-v2S"/>
                         <outlet property="donateBikeButton" destination="NMz-Zk-njW" id="1Cm-HC-sHw"/>
-                        <outlet property="exitRoundButton" destination="VVK-47-ezf" id="431-h7-NPE"/>
+                        <outlet property="exitRoundButton" destination="VVK-47-ezf" id="cJt-d5-zno"/>
                         <outlet property="sendButton" destination="agN-Gy-of9" id="fqH-mp-jBS"/>
                     </connections>
                 </viewController>
@@ -447,9 +447,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="立馬走">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="exitAction:" destination="6FQ-uU-BzB" eventType="touchUpInside" id="7MZ-Cd-6uP"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzt-wa-v3z" customClass="CERoundButton" customModule="ClydeLiveMVVM" customModuleProvider="target">
                                         <rect key="frame" x="160" y="240" width="120" height="40"/>
@@ -462,9 +459,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="先不要">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="noAction:" destination="6FQ-uU-BzB" eventType="touchUpInside" id="m7D-LS-4Ti"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="確定離開此聊天室？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byd-vE-mZT">
                                         <rect key="frame" x="20" y="150" width="260" height="80"/>
@@ -505,6 +499,10 @@
                             <constraint firstItem="lCN-YK-lmo" firstAttribute="centerX" secondItem="40Y-ee-2NV" secondAttribute="centerX" id="ovi-Vy-hQs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="Pzt-wa-v3z" id="X7x-3J-1Em"/>
+                        <outlet property="leaveButton" destination="lNM-tI-jcb" id="l7n-vs-aYB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNP-dx-52H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

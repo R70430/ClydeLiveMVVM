@@ -25,8 +25,9 @@ class SearchVC: UIViewController {
     @IBOutlet weak var streamersCollectionView: UICollectionView!
     //SearchBar
     @IBOutlet weak var StreamersSearchBar: UISearchBar!
-    
-    //MARK: - override
+}
+//MARK: - override
+extension SearchVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         

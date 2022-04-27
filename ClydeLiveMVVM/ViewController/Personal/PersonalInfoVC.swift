@@ -21,8 +21,9 @@ class PersonalInfoVC: UIViewController {
     @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
-    
-    //MARK: - Override
+}
+//MARK: - Override
+extension PersonalInfoVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 

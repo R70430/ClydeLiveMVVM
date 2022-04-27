@@ -45,6 +45,7 @@ class StreamerVC: UIViewController {
     @IBOutlet weak var chatView: UIView!
     
     @IBOutlet weak var chatViewButtomLayoutConstraint: NSLayoutConstraint!
+    
     //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -343,14 +344,14 @@ class StreamerVC: UIViewController {
         chatViewButtomLayoutConstraint.constant = 0.0
     }
     //MARK: - @IBAction
-    @IBAction func exitAction(_ sender: CERoundButton) {
-
+    @IBAction func exitAction(_ sender: UIButton) {
         let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = myStoryboard.instantiateViewController(withIdentifier: "AlertVC")
         
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true)
     }
+    
     @IBAction func sendAction(_ sender: CERoundButton) {
         //檢查輸入框是否有內容
         guard

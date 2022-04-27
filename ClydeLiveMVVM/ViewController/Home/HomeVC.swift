@@ -30,7 +30,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     //Label
     @IBOutlet weak var nickNameLabel: UILabel!
-    
+}
+extension HomeVC {
     //MARK: - override
     override func viewDidLoad() {
         super.viewDidLoad()
