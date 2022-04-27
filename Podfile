@@ -10,6 +10,8 @@ target 'ClydeLiveMVVM' do
   pod 'Firebase/Storage'
   pod 'lottie-ios'
   pod 'SDWebImage', '~> 5.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'ClydeLiveMVVMTests' do
     inherit! :search_paths

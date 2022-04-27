@@ -51,6 +51,12 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
@@ -59,6 +65,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Storage
   - lottie-ios
+  - RxCocoa
+  - RxSwift
   - SDWebImage (~> 5.0)
 
 SPEC REPOS:
@@ -74,6 +82,9 @@ SPEC REPOS:
     - lottie-ios
     - nanopb
     - PromisesObjC
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SDWebImage
 
 SPEC CHECKSUMS:
@@ -88,8 +99,11 @@ SPEC CHECKSUMS:
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: 35c4cc79987747b5fab66f203be0aba96c029ada
+PODFILE CHECKSUM: 79ed1b24e5ea913593bd5e78c4b56d3abff0e6af
 
 COCOAPODS: 1.11.3
