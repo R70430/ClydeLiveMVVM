@@ -20,7 +20,7 @@ class AlertVC: UIViewController {
 extension AlertVC {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.modalPresentationStyle = .overFullScreen
         //離開按鈕
         leaveButton.rx.tap
             .subscribe(onNext: { [weak self] in

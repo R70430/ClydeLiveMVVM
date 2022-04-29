@@ -8,21 +8,21 @@ import Lottie
 import UIKit
 
 class HomesStreamerCollectionVCell: UICollectionViewCell {
-    
-    @IBOutlet weak var titleLabel: CERoundLabel!
-    @IBOutlet weak var streamerImageView: CECircleImageView!
-    
-    @IBOutlet weak var numButton: CERoundButton!
-    
-    
-    @IBOutlet weak var firstTagLabel: UILabel!
-    
-    @IBOutlet weak var nameLabel: CERoundLabel!
-    
-    @IBOutlet weak var countryLabel: CERoundLabel!
-    @IBOutlet weak var secondTagLabel: UILabel!
+//MARK: - Variable
+    //AnimationView
     @IBOutlet weak var musicAnimationView: AnimationView!
+    //Button
+    @IBOutlet weak var numButton: UIButton!
+    //ImageView
+    @IBOutlet weak var streamerImageView: UIImageView!
+    //Label
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var firstTagLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var secondTagLabel: UILabel!
     
+//MARK: - Override
     override func awakeFromNib() {
         super.awakeFromNib()
         print("有進來")

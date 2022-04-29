@@ -15,6 +15,9 @@ class StreamerVC: UIViewController {
     //MARK: - @Variable
     // Firebase - 監聽器
     var handle: AuthStateDidChangeListenerHandle?
+    //轉場用圖片視圖
+    var transImageView = UIImageView()
+    var transImage = UIImage()
     // AVPlayer - 負責控制播放器的操作
     var playerLooper: AVPlayerLooper!
     var queuePlayer: AVQueuePlayer!
@@ -49,6 +52,12 @@ class StreamerVC: UIViewController {
     //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //顯示轉場用視圖
+        transImageView.frame = view.frame
+        transImageView.image = transImage
+        transImageView.contentMode = .scaleAspectFit
+        view.addSubview(transImageView)
         
         chatTableView.transform = CGAffineTransform(rotationAngle: .pi)
         //播放影片
@@ -345,8 +354,8 @@ class StreamerVC: UIViewController {
     }
     //MARK: - @IBAction
     @IBAction func exitAction(_ sender: UIButton) {
-        let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = myStoryboard.instantiateViewController(withIdentifier: "AlertVC")
+       
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlertVC") as! AlertVC
         
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true)

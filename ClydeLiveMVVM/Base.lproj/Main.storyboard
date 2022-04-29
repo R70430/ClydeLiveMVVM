@@ -211,9 +211,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="首頁" image="tabHome" id="iEw-4K-J3B"/>
                     <connections>
+                        <outlet property="homeCollectionView" destination="LEC-R2-QKy" id="8n1-RI-WNg"/>
                         <outlet property="nickNameLabel" destination="iSZ-Vp-qkx" id="nXy-8c-UlH"/>
                         <outlet property="photoImageView" destination="aP2-rf-zw5" id="h06-D8-1Vj"/>
-                        <outlet property="streamersCollectionView" destination="LEC-R2-QKy" id="8n1-RI-WNg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -950,10 +950,10 @@
             </objects>
             <point key="canvasLocation" x="2726" y="1533"/>
         </scene>
-        <!--StartTBVC-->
+        <!--TabBC-->
         <scene sceneID="LRn-Ne-gQE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bHx-AT-III" customClass="startTBVC" customModule="ClydeLiveMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBC" automaticallyAdjustsScrollViewInsets="NO" id="bHx-AT-III" customClass="TabBC" customModule="ClydeLiveMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KCY-lS-zNP">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1293,7 +1293,6 @@
         <designable name="4Zn-cx-SNx">
             <size key="intrinsicContentSize" width="59" height="12"/>
         </designable>
-        <designable name="BRC-pZ-hrz"/>
         <designable name="G2e-28-srH">
             <size key="intrinsicContentSize" width="76.5" height="18"/>
         </designable>
@@ -1351,7 +1350,6 @@
         <designable name="fUu-Qp-V2A">
             <size key="intrinsicContentSize" width="90" height="90"/>
         </designable>
-        <designable name="h2j-KT-e69"/>
         <designable name="iXh-W8-EsH">
             <size key="intrinsicContentSize" width="24" height="14"/>
         </designable>
@@ -1359,7 +1357,7 @@
             <size key="intrinsicContentSize" width="67" height="31"/>
         </designable>
         <designable name="lrv-cH-9pL">
-            <size key="intrinsicContentSize" width="116.5" height="19.5"/>
+            <size key="intrinsicContentSize" width="4" height="19.5"/>
         </designable>
         <designable name="lwX-qg-pfF">
             <size key="intrinsicContentSize" width="59" height="12"/>

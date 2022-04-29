@@ -7,7 +7,7 @@
 
 import UIKit
 
-class startTBVC: UITabBarController {
+class TabBC: UITabBarController {
     
     
     
