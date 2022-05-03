@@ -15,8 +15,7 @@ class StreamerVC: UIViewController {
     //MARK: - @Variable
     // Firebase - 監聽器
     var handle: AuthStateDidChangeListenerHandle?
-    //轉場用圖片視圖
-    var transImageView = UIImageView()
+    //轉場用圖片
     var transImage = UIImage()
     // AVPlayer - 負責控制播放器的操作
     var playerLooper: AVPlayerLooper!
@@ -47,6 +46,8 @@ class StreamerVC: UIViewController {
     //View
     @IBOutlet weak var chatView: UIView!
     
+    @IBOutlet weak var transImageView:UIImageView!
+    
     @IBOutlet weak var chatViewButtomLayoutConstraint: NSLayoutConstraint!
     
     //MARK: - Override
@@ -54,10 +55,7 @@ class StreamerVC: UIViewController {
         super.viewDidLoad()
         
         //顯示轉場用視圖
-        transImageView.frame = view.frame
         transImageView.image = transImage
-        transImageView.contentMode = .scaleAspectFit
-        view.addSubview(transImageView)
         
         chatTableView.transform = CGAffineTransform(rotationAngle: .pi)
         //播放影片

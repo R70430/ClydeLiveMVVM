@@ -20,7 +20,7 @@ class HomeVC: UIViewController {
     //被點擊的Cell
     var selectedCell: HomesStreamerCollectionVCell!
     //被點擊的Cell的快照
-    var selectedCellImageViewSnapshot: UIView?
+    var homeSelectedCellSnapshot: UIView?
     //負責跟Server傳送或取得資料的ViewModel
     let serversDataVM = ServersDataViewModel()
     //進入直播間動畫

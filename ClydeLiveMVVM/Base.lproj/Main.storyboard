@@ -392,14 +392,23 @@
                                     <constraint firstAttribute="trailing" secondItem="agN-Gy-of9" secondAttribute="trailing" constant="20" id="v35-tm-w6a"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bxP-Zw-v2t">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bxP-Zw-v2t" secondAttribute="height" multiplier="1:1" id="wj1-IA-IKY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vd4-K8-IMb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Vd4-K8-IMb" firstAttribute="trailing" secondItem="Hru-W8-GjK" secondAttribute="trailing" id="EQP-W8-tLy"/>
+                            <constraint firstItem="bxP-Zw-v2t" firstAttribute="centerX" secondItem="bNF-nF-Emy" secondAttribute="centerX" id="EvY-bC-IHd"/>
                             <constraint firstItem="Hru-W8-GjK" firstAttribute="leading" secondItem="Vd4-K8-IMb" secondAttribute="leading" id="Gq3-iw-7MQ"/>
+                            <constraint firstItem="bxP-Zw-v2t" firstAttribute="width" secondItem="Vd4-K8-IMb" secondAttribute="width" id="TOE-Uz-5w4"/>
                             <constraint firstItem="Vd4-K8-IMb" firstAttribute="trailing" secondItem="VVK-47-ezf" secondAttribute="trailing" constant="20" id="Zcc-VN-rCP"/>
                             <constraint firstItem="VVK-47-ezf" firstAttribute="top" secondItem="Vd4-K8-IMb" secondAttribute="top" constant="20" id="gUf-2h-sct"/>
+                            <constraint firstItem="bxP-Zw-v2t" firstAttribute="centerY" secondItem="bNF-nF-Emy" secondAttribute="centerY" id="jGv-2g-v57"/>
                             <constraint firstItem="Vd4-K8-IMb" firstAttribute="bottom" secondItem="Hru-W8-GjK" secondAttribute="bottom" id="mZh-8h-5bx"/>
                             <constraint firstItem="Hru-W8-GjK" firstAttribute="height" secondItem="Vd4-K8-IMb" secondAttribute="height" multiplier="0.5" id="ygZ-tk-bM5"/>
                         </constraints>
@@ -413,6 +422,7 @@
                         <outlet property="donateBikeButton" destination="NMz-Zk-njW" id="1Cm-HC-sHw"/>
                         <outlet property="exitRoundButton" destination="VVK-47-ezf" id="cJt-d5-zno"/>
                         <outlet property="sendButton" destination="agN-Gy-of9" id="fqH-mp-jBS"/>
+                        <outlet property="transImageView" destination="bxP-Zw-v2t" id="hRK-d4-GyG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzK-BR-soc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -506,7 +516,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNP-dx-52H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810.144927536232" y="-557.14285714285711"/>
+            <point key="canvasLocation" x="2652" y="-593"/>
         </scene>
         <!--會員登入-->
         <scene sceneID="nUQ-SJ-pYL">

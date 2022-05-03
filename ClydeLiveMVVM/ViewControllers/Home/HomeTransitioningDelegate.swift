@@ -15,7 +15,7 @@ extension HomeVC: UIViewControllerTransitioningDelegate {
     
         guard
             let secondVC = presented as? StreamerVC,
-            let snapShot = selectedCellImageViewSnapshot
+            let snapShot = homeSelectedCellSnapshot
         else{
             return nil
         }
@@ -31,7 +31,7 @@ extension HomeVC: UIViewControllerTransitioningDelegate {
         
         guard
             let secondVC = dismissed as? StreamerVC,
-            let snapShot = selectedCellImageViewSnapshot
+            let snapShot = homeSelectedCellSnapshot
         else{
             return nil
         }

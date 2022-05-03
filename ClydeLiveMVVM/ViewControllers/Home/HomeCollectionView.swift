@@ -57,7 +57,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource {
         //連接自訂的cell
         selectedCell = collectionView.cellForItem(at: indexPath) as? HomesStreamerCollectionVCell
         //快照
-        selectedCellImageViewSnapshot = selectedCell?.streamerImageView.snapshotView(afterScreenUpdates: false)
+        homeSelectedCellSnapshot = selectedCell?.streamerImageView.snapshotView(afterScreenUpdates: false)
         //動畫開始
         enterStreamAnimationView?.isHidden = false
         enterStreamAnimationView?.play()
