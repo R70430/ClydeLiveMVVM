@@ -11,7 +11,7 @@ import UIKit
 //MARK: - Present(放大)
 class SnapShotZoomInTrans:NSObject ,UIViewControllerAnimatedTransitioning {
     
-    static let durationTime = 0.6
+    static let durationTime = 1
     //所需的屬性(轉場種類，起始視圖、終點視圖、所選Cell的快照、所選Cell的座標
     private let type: PresentationType
     private let firstVC: HomeVC

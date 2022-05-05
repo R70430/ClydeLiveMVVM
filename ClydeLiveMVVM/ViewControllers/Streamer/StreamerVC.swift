@@ -34,18 +34,19 @@ class StreamerVC: UIViewController {
     //進入動畫
     private var loveAnimationView: AnimationView?
     //MARK: - @IBOutlet
-    //RoundButton
-    @IBOutlet weak var exitRoundButton: CERoundButton!
-    @IBOutlet weak var sendButton: CERoundButton!
-    @IBOutlet weak var donateBikeButton: CERoundButton!
+    // Button
+    @IBOutlet weak var exitRoundButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var donateBikeButton: UIButton!
     @IBOutlet weak var chatBottomLayoutConstraint: NSLayoutConstraint!
-    //TableView
+    // TableView
     @IBOutlet weak var chatTableView: UITableView!
-    //TextField
+    // TextField
     @IBOutlet weak var chatTextField: UITextField!
-    //View
+    // View
     @IBOutlet weak var chatView: UIView!
-    
+   
+    // ImageView
     @IBOutlet weak var transImageView:UIImageView!
     
     @IBOutlet weak var chatViewButtomLayoutConstraint: NSLayoutConstraint!
@@ -56,6 +57,7 @@ class StreamerVC: UIViewController {
         
         //顯示轉場用視圖
         transImageView.image = transImage
+        
         
         chatTableView.transform = CGAffineTransform(rotationAngle: .pi)
         //播放影片
@@ -132,7 +134,6 @@ class StreamerVC: UIViewController {
    
         //創建顯示影片的圖層
         let playerLayer = AVPlayerLayer.init(player: queuePlayer)
-        
         playerLayer.videoGravity = .resizeAspectFill
         playerLayer.frame = self.view.frame
         self.view.layer.addSublayer(playerLayer)

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 //直播間的資料
 let streamerJSONString = """
 {

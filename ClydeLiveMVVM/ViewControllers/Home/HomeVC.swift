@@ -23,11 +23,10 @@ class HomeVC: UIViewController {
     var homeSelectedCellSnapshot: UIView?
     //負責跟Server傳送或取得資料的ViewModel
     let serversDataVM = ServersDataViewModel()
-    //進入直播間動畫
-    var enterStreamAnimationView: AnimationView?
+    
+    let firebaseVM = FirebaseViewModel()
     //快照轉場動畫
     var snapShotTrans:SnapShotZoomInTrans?
-    
     //CollectionView
     @IBOutlet weak var homeCollectionView: UICollectionView!
     //ImageView
@@ -39,46 +38,30 @@ class HomeVC: UIViewController {
 
 //MARK: - Override
 extension HomeVC {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //設定delegate
-        homeCollectionView.delegate = self
-        homeCollectionView.dataSource = self
-        //設定Layout
-        flowLayoutSetting()
-        //設定動畫
-        settingAnimate()
-        
+        configureCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //添加監聽器 並取得 nickName 與 personalPhoto
-        handle = Auth.auth().addStateDidChangeListener({ auth, user in
-            
-            //檢查 user 是否有資料
-            guard
-                let userData = user,
-                let myNickName = userData.displayName,
-                let userEmail = userData.email
-            else{
-                print("沒有監聽到 user 資料")
+        //取得 nickMame
+        firebaseVM.getFirebaseUsersDisplayName { nickName in
+
+            guard nickName != nil else {
                 self.nickNameLabel.text = "訪客"
-                self.photoImageView.image = UIImage(named: assetsImageName.picPersonal.rawValue)
                 return
             }
-            self.nickNameLabel.text = myNickName
-            //取得頭像
-            Storage.storage().reference().child("\(userEmail)/profilePhoto.jpg").getData(maxSize: .max) { photoData, err in
-                guard
-                    let myData = photoData,
-                    let img = UIImage(data: myData)
-                else{
-                    print("取得 Firebase Storage 的 profilePhoto.jpg 失敗:\(err!.localizedDescription)")
-                    return
-                }
-                self.photoImageView.image = img
-            }
-        })
+
+            self.nickNameLabel.text = nickName
+        }
+        //取得 頭像
+        firebaseVM.getFirebaseUsersProfilePhoto { image in
+            guard image != nil else { return }
+            self.photoImageView.image = image
+        }
+        
+        
         //取得 實況主的資料 準備塞入Cell (streamerData是DataModel裡要解析的資料)
         serversDataVM.serversStreamersJSONDecode(jsonString: streamerJSONString) { dataArray in
             guard let myDataArray = dataArray else { return }
@@ -92,19 +75,27 @@ extension HomeVC {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if handle != nil {
-            //移除監聽器
-            Auth.auth().removeStateDidChangeListener(handle!)
-        }
+        
+        //移除 Firebase 監聽器
+        guard handle != nil else {return}
+        Auth.auth().removeStateDidChangeListener(handle!)
+        
     }
 }
 
 
 //MARK: - Function
 extension HomeVC {
-    //MARK: - Function
-    //設定CollectionView的Layout
-    func flowLayoutSetting(){
+    // 配置 CollectionView
+    func configureCollectionView(){
+        //設定 delegate
+        homeCollectionView.delegate = self
+        homeCollectionView.dataSource = self
+        //設定 Layout
+        homeCollectionView.collectionViewLayout = configureFlowLayout()
+    }
+    // 配置 CollectionView 的 FlowLayout
+    func configureFlowLayout() -> UICollectionViewFlowLayout{
         //聊天室cell的通用Layout
         var streamerCelllayout: UICollectionViewFlowLayout{
             //實體化
@@ -123,22 +114,9 @@ extension HomeVC {
                 width: UIScreen.main.bounds.size.width, height: 0)
             return lay
         }
-        homeCollectionView.collectionViewLayout = streamerCelllayout
+        return streamerCelllayout
     }
-    
-    //設定動畫
-    func settingAnimate(){
-        //初始化進入動畫
-        enterStreamAnimationView = AnimationView(name: "openDarkDoor")
-        if let av = enterStreamAnimationView{
-            av.frame = view.frame
-            av.contentMode = .scaleAspectFit
-            av.isHidden = true
-            av.animationSpeed = 1.5
-            av.alpha = 0.9
-        }
-        view.addSubview(enterStreamAnimationView!)
-    }
+   
     
     //換頁到直播間
     func presentStreamerVC(with image:UIImage){

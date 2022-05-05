@@ -22,7 +22,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         //連接自訂的cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellsID.homeCell.rawValue, for: indexPath) as! HomesStreamerCollectionVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellsID.HomeCell.rawValue, for: indexPath) as! HomesStreamerCollectionVCell
         
         //變更直播主的圖片
         let imgURL = URL(string: streamerDataArray[indexPath.row].head_photo)
@@ -53,22 +53,23 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource {
     
     // 3.Cell被點擊時要執行的內容
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //連接自訂的cell
+     
+        
+        if indexPath.item == 9 {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StreamerRoomsVC") as! StreamerRoomsVC
+            
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+            return
+        }
         
         //連接自訂的cell
         selectedCell = collectionView.cellForItem(at: indexPath) as? HomesStreamerCollectionVCell
+        
         //快照
         homeSelectedCellSnapshot = selectedCell?.streamerImageView.snapshotView(afterScreenUpdates: false)
-        //動畫開始
-        enterStreamAnimationView?.isHidden = false
-        enterStreamAnimationView?.play()
-        //延時1秒
-        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-            //動畫結束
-            self.enterStreamAnimationView?.isHidden = true
-            self.enterStreamAnimationView?.stop()
-            
-            //換頁
-            self.presentStreamerVC(with: self.selectedCell.streamerImageView.image!)
-        }
+
+        presentStreamerVC(with: self.selectedCell.streamerImageView.image!)
     }
 }

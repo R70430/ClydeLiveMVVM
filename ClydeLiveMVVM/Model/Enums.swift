@@ -9,9 +9,10 @@ import Foundation
 
 //所有Cell的ID
 enum cellsID:String{
-    case homeCell = "homeStreamersCell"
+    case HomeCell = "homeStreamersCell"
     case SearchCell = "searchStreamersCell"
     case ChatCell = "chatCell"
+    case StreamerRoomsCell = "streamerRoomsCell"
 }
 //所有的storyboardID
 enum storyboardsVCsID:String{

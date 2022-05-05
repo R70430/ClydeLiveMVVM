@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		00269870E8829D0001C7A29F /* Pods_ClydeLiveMVVM_ClydeLiveMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C549943E02420AD5D019D244 /* Pods_ClydeLiveMVVM_ClydeLiveMVVMUITests.framework */; };
+		4A1D9C442820DE0E00982383 /* turntable.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A1D9C432820DE0E00982383 /* turntable.json */; };
+		4A1D9C462820E00300982383 /* TurntableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D9C452820E00300982383 /* TurntableVC.swift */; };
+		4A1D9C6D2821094900982383 /* StreamerRoomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D9C6C2821094900982383 /* StreamerRoomsVC.swift */; };
+		4A1D9C7228212B7C00982383 /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D9C7128212B7C00982383 /* ChatRoomVC.swift */; };
+		4A1D9C7428212C7800982383 /* ChatRoomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D9C7328212C7800982383 /* ChatRoomTableCell.swift */; };
+		4A1D9C762822137C00982383 /* StreamerRoomsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1D9C752822137C00982383 /* StreamerRoomsTableCell.swift */; };
+		4AA9A0C0282366B600098BA2 /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9A0BF282366B600098BA2 /* FirebaseViewModel.swift */; };
 		4ADBD56A28193D24008768FF /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADBD56928193D24008768FF /* LoginVM.swift */; };
 		4AFD2CE0281B973B00660F69 /* SnapShotTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD2CDF281B973B00660F69 /* SnapShotTransition.swift */; };
 		4AFD2CE5281BCDED00660F69 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFD2CE4281BCDED00660F69 /* HomeCollectionView.swift */; };
@@ -40,7 +47,7 @@
 		4B962A23280EB0B0006A1D02 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B962A22280EB0B0006A1D02 /* login.json */; };
 		4B9A5415280A92EC00F4E09C /* CustomElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A5414280A92EC00F4E09C /* CustomElement.swift */; };
 		4B9A5419280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A5418280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift */; };
-		4BA08F1C2810E646006DF434 /* TabBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA08F1B2810E646006DF434 /* TabBC.swift */; };
+		4BA08F1C2810E646006DF434 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA08F1B2810E646006DF434 /* MainTabBarController.swift */; };
 		4BA23E5B280D0FE600332EAA /* PersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA23E5A280D0FE600332EAA /* PersonalInfoVC.swift */; };
 		4BC0F865280E1DC6001F0904 /* openDarkDoor.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BC0F864280E1DC6001F0904 /* openDarkDoor.json */; };
 		4BC0F867280E1F57001F0904 /* loves.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BC0F866280E1F57001F0904 /* loves.json */; };
@@ -75,6 +82,13 @@
 /* Begin PBXFileReference section */
 		2A2AA733DFE4D3E9B0C2B805 /* Pods-ClydeLiveMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClydeLiveMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-ClydeLiveMVVMTests/Pods-ClydeLiveMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E656DE80109CFEEB62A0D7C /* Pods-ClydeLiveMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClydeLiveMVVM.debug.xcconfig"; path = "Target Support Files/Pods-ClydeLiveMVVM/Pods-ClydeLiveMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		4A1D9C432820DE0E00982383 /* turntable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = turntable.json; sourceTree = "<group>"; };
+		4A1D9C452820E00300982383 /* TurntableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurntableVC.swift; sourceTree = "<group>"; };
+		4A1D9C6C2821094900982383 /* StreamerRoomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerRoomsVC.swift; sourceTree = "<group>"; };
+		4A1D9C7128212B7C00982383 /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
+		4A1D9C7328212C7800982383 /* ChatRoomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableCell.swift; sourceTree = "<group>"; };
+		4A1D9C752822137C00982383 /* StreamerRoomsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerRoomsTableCell.swift; sourceTree = "<group>"; };
+		4AA9A0BF282366B600098BA2 /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		4ADBD56928193D24008768FF /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		4AFD2CDF281B973B00660F69 /* SnapShotTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotTransition.swift; sourceTree = "<group>"; };
 		4AFD2CE4281BCDED00660F69 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
@@ -111,7 +125,7 @@
 		4B962A22280EB0B0006A1D02 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		4B9A5414280A92EC00F4E09C /* CustomElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElement.swift; sourceTree = "<group>"; };
 		4B9A5418280AB5FF00F4E09C /* SearchsStreamerCollectionVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchsStreamerCollectionVCell.swift; sourceTree = "<group>"; };
-		4BA08F1B2810E646006DF434 /* TabBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBC.swift; sourceTree = "<group>"; };
+		4BA08F1B2810E646006DF434 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4BA23E5A280D0FE600332EAA /* PersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoVC.swift; sourceTree = "<group>"; };
 		4BC0F864280E1DC6001F0904 /* openDarkDoor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = openDarkDoor.json; sourceTree = "<group>"; };
 		4BC0F866280E1F57001F0904 /* loves.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loves.json; sourceTree = "<group>"; };
@@ -159,6 +173,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A1D9C6B2821090A00982383 /* StreamerRooms */ = {
+			isa = PBXGroup;
+			children = (
+				4A1D9C7028212B5F00982383 /* ChatRoom */,
+				4A1D9C6C2821094900982383 /* StreamerRoomsVC.swift */,
+				4A1D9C752822137C00982383 /* StreamerRoomsTableCell.swift */,
+			);
+			path = StreamerRooms;
+			sourceTree = "<group>";
+		};
+		4A1D9C7028212B5F00982383 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				4A1D9C7128212B7C00982383 /* ChatRoomVC.swift */,
+				4A1D9C7328212C7800982383 /* ChatRoomTableCell.swift */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		4A49B49428236213009E9A5B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4B404FFB280924D5004DAC91 /* AppDelegate.swift */,
+				4B404FFD280924D5004DAC91 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4A49B49528236232009E9A5B /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4B405001280924D5004DAC91 /* Main.storyboard */,
+				4B405009280924D7004DAC91 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		4AFD2CDE281B96D300660F69 /* CustomTransiton */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +240,7 @@
 				4DD90E0E280C208F00909677 /* StreamerVC.swift */,
 				4DD90E10280C20BB00909677 /* StreamersChatroomTableVCell.swift */,
 				4B151F58280E5FD100AF6EDA /* AlertVC.swift */,
+				4A1D9C452820E00300982383 /* TurntableVC.swift */,
 			);
 			path = Streamer;
 			sourceTree = "<group>";
@@ -219,16 +271,14 @@
 		4B404FFA280924D5004DAC91 /* ClydeLiveMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4A49B49528236232009E9A5B /* StoryBoard */,
+				4A49B49428236213009E9A5B /* AppDelegate */,
 				4D9959C8280C92320018D72B /* LottieAnimate */,
 				4B5E8A232809426700F53633 /* Model */,
 				4B5E8A0A2809290500F53633 /* ViewModel */,
 				4B5E8A09280928F400F53633 /* ViewControllers */,
 				4B5E8A1428092A4700F53633 /* Others */,
-				4B404FFB280924D5004DAC91 /* AppDelegate.swift */,
-				4B404FFD280924D5004DAC91 /* SceneDelegate.swift */,
-				4B405001280924D5004DAC91 /* Main.storyboard */,
 				4B405007280924D7004DAC91 /* Assets.xcassets */,
-				4B405009280924D7004DAC91 /* LaunchScreen.storyboard */,
 				4B40502E280926D2004DAC91 /* GoogleService-Info.plist */,
 				4B40500C280924D7004DAC91 /* Info.plist */,
 				4B405004280924D5004DAC91 /* ClydeLiveMVVM.xcdatamodeld */,
@@ -256,6 +306,7 @@
 		4B5E8A09280928F400F53633 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A1D9C6B2821090A00982383 /* StreamerRooms */,
 				4AFD2CE3281BCD6A00660F69 /* Streamer */,
 				4AFD2CE2281BCD5700660F69 /* Register */,
 				4AFD2CE1281BCD4800660F69 /* Login */,
@@ -311,7 +362,7 @@
 				4B5E8A1B28093F1D00F53633 /* Extension.swift */,
 				4B9A5414280A92EC00F4E09C /* CustomElement.swift */,
 				4B151F5A280E6B3E00AF6EDA /* StreamerCodeble.swift */,
-				4BA08F1B2810E646006DF434 /* TabBC.swift */,
+				4BA08F1B2810E646006DF434 /* MainTabBarController.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -319,6 +370,7 @@
 		4B5E8A232809426700F53633 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AA9A0BF282366B600098BA2 /* FirebaseViewModel.swift */,
 				4B5E8A242809429000F53633 /* ServersDataModel.swift */,
 				4B5E8A28280945E900F53633 /* Enums.swift */,
 			);
@@ -338,6 +390,7 @@
 				4BC0F866280E1F57001F0904 /* loves.json */,
 				4B7D29C42811460800601411 /* rocket.json */,
 				4B7D29C2281141AE00601411 /* bicycle.json */,
+				4A1D9C432820DE0E00982383 /* turntable.json */,
 			);
 			path = LottieAnimate;
 			sourceTree = "<group>";
@@ -481,6 +534,7 @@
 				4B40502F280926D2004DAC91 /* GoogleService-Info.plist in Resources */,
 				4BC0F86D280E2BC6001F0904 /* approve.json in Resources */,
 				4B405008280924D7004DAC91 /* Assets.xcassets in Resources */,
+				4A1D9C442820DE0E00982383 /* turntable.json in Resources */,
 				4B7D29C3281141AE00601411 /* bicycle.json in Resources */,
 				4B1EA11A28114D6A00865087 /* house.json in Resources */,
 				4DD90E13280C291200909677 /* hime3.mp4 in Resources */,
@@ -621,13 +675,17 @@
 				4DD90E0F280C208F00909677 /* StreamerVC.swift in Sources */,
 				4B5E8A222809425200F53633 /* ServersDataVM.swift in Sources */,
 				4B5E8A252809429000F53633 /* ServersDataModel.swift in Sources */,
+				4A1D9C7428212C7800982383 /* ChatRoomTableCell.swift in Sources */,
 				4B5E8A1628092AA400F53633 /* SearchVC.swift in Sources */,
 				4AFD2CE0281B973B00660F69 /* SnapShotTransition.swift in Sources */,
 				4BA23E5B280D0FE600332EAA /* PersonalInfoVC.swift in Sources */,
+				4A1D9C462820E00300982383 /* TurntableVC.swift in Sources */,
 				4B5E8A2B2809627C00F53633 /* HomeCollectionCell.swift in Sources */,
 				4B5E8A1828092BB500F53633 /* LoginVC.swift in Sources */,
 				4B9A5415280A92EC00F4E09C /* CustomElement.swift in Sources */,
-				4BA08F1C2810E646006DF434 /* TabBC.swift in Sources */,
+				4A1D9C6D2821094900982383 /* StreamerRoomsVC.swift in Sources */,
+				4BA08F1C2810E646006DF434 /* MainTabBarController.swift in Sources */,
+				4A1D9C7228212B7C00982383 /* ChatRoomVC.swift in Sources */,
 				4B5E8A13280929E700F53633 /* HomeVC.swift in Sources */,
 				4ADBD56A28193D24008768FF /* LoginVM.swift in Sources */,
 				4B5E8A1A28092CD300F53633 /* RegisterVC.swift in Sources */,
@@ -641,6 +699,8 @@
 				4B5E8A29280945E900F53633 /* Enums.swift in Sources */,
 				4B5E8A1C28093F1D00F53633 /* Extension.swift in Sources */,
 				4AFD2CE5281BCDED00660F69 /* HomeCollectionView.swift in Sources */,
+				4AA9A0C0282366B600098BA2 /* FirebaseViewModel.swift in Sources */,
+				4A1D9C762822137C00982383 /* StreamerRoomsTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
